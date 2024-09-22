@@ -1,0 +1,545 @@
+/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
+*/
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+    --color-celeste: #EAF2FD;
+}
+
+body {
+    padding-top: 80px;
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-de-fondo-menu);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 5px 100px;
+    box-sizing: border-box;
+}
+
+.cabecera__logo {
+    max-width: 50px;
+    margin-right: 10px; /* Espacio entre logo y título */
+}
+
+.cabecera__titulo {
+    font-size: 1.2rem;
+    margin: 0; /* Sin márgenes */
+}
+
+.navegacion {
+    margin-left: auto; /* Esto empuja la navegación hacia la derecha */
+}
+
+.navegacion__lista {
+    display: flex; /* Asegura que los elementos estén en fila */
+    gap: 1rem; /* Espacio entre elementos */
+}
+
+.navegacion__elemento a {
+    font-size: 0.9rem;
+}
+
+.navegacion__elemento a:hover {
+    color: #ff0000;
+}
+
+.navegacion__elemento a.active {
+    text-decoration: underline;
+    font-weight: bold; /* Opcional: para hacer el texto más destacado */
+}
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    padding: 5px 100px;
+}
+
+.presentacion__foto {
+    width: 30%; /* Ajusta el tamaño de la imagen según tu preferencia */
+    order: 2; /* Esto mueve la imagen al lado derecho */
+}
+
+.presentacion__contenedor {
+    width: 70%; /* Ajusta el tamaño del contenedor según tu preferencia */
+    order: 1; /* Esto mueve el contenido al lado izquierdo */
+}
+
+.presentacion__titulo {
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    font-weight: bold;
+    white-space: normal;      /* Permite que el texto se envuelva */
+    overflow: hidden;         /* Oculta el texto que no se muestra */
+    max-width: 100%;         /* No sobrepasa el contenedor */
+    word-wrap: break-word;   /* Permite el salto de línea */
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block; /* Para asegurarnos de que sigue el texto */
+    border-right: 2px solid black; /* La barra de escritura */
+    animation: blink 0.7s steps(1) infinite; /* Animación de parpadeo */
+}
+
+/* Ocultar la barra de escritura al finalizar */
+.no-cursor .cursor {
+    display: none; /* Oculta la barra al finalizar */
+}
+
+
+.presentacion__subtitulo {
+    font-size: 1.5rem; /* Tamaño moderado para el subtítulo, alrededor de 20px */
+    line-height: 1.5;
+}
+
+.presentacion__titulo.no-cursor::after {
+    display: none;  /* Esconde completamente la barra de escritura */
+}
+.redes {
+    display: flex; /* Para alinear los elementos en una fila */
+    gap:15px;
+    padding: 0;
+    list-style: none;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi {
+    margin: 0 auto; /* Centra la sección en la página */
+    padding: 40px 100px;
+    background: var(--color-celeste);
+}
+
+.sobre-mi__titulo {
+    font-size: 2.5rem; /* Tamaño grande para el título (40px) */
+    margin-bottom: 50px;
+}
+
+.sobre-mi__texto {
+    font-size: 1.5rem; /* Tamaño moderado para el texto (20px) */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+    margin-bottom: 15px;
+}
+
+.sobre-mi__firma {
+    width: 150px; /* Ajusta el tamaño de la firma */
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centra la firma en su contenedor */
+}
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades {
+    position: relative;
+    padding: 40px 100px;
+    overflow: hidden;
+}
+
+.habilidades__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto asegura que el video ocupe todo el espacio */
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+.habilidades__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con 50% de transparencia */
+    z-index: 0; /* Coloca la capa detrás del contenido, pero delante del video */
+}
+
+.habilidades__content {
+    position: relative; /* Asegura que el contenido esté en el frente */
+    z-index: 1; /* Coloca el contenido por encima del video */
+    padding: 0px;
+    color: white; /* Cambia el color del texto para que se vea bien sobre el video */
+    text-align: center;
+}
+
+.habilidades__titulo {
+    font-size: 2.5rem; /* Tamaño del título (40px) */
+    margin-bottom: 20px;
+}
+
+.habilidades__lista {
+    display: flex; /* Hace que los elementos hijos se dispongan en fila horizontal */
+    justify-content: center; /* Centra los elementos en la página */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay espacio suficiente en pantallas más pequeñas */
+    gap: 20px; /* Añade espacio entre los elementos */
+    padding: 0;
+    list-style: none; /* Elimina las viñetas de la lista */
+}
+
+.habilidades__elemento {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px; /* Ancho de cada ítem */
+}
+
+.habilidades__icono {
+    width: 50px;  
+    margin-bottom: 10px;
+}
+
+.habilidades__nombre {
+    font-size: 1.25rem; /* Tamaño del texto (20px) */
+    font-weight: 500;
+}
+
+/*------------------------------ Sección de formación --------------------------------*/
+
+.formacion {
+    text-align: center;                  /* Centra el texto en el encabezado */
+}
+
+.formacion__titulo {
+    font-size: 2.5rem; /* Tamaño grande para el título (40px) */
+    margin-bottom: 50px;
+}
+
+.formacion__lista {
+    display: flex;                       /* Alinea los elementos en fila */
+    justify-content: center;             /* Centra los elementos horizontalmente */
+    flex-wrap: wrap;                    /* Permite que los elementos se envuelvan en caso de que no quepan */
+    list-style: none;                   /* Elimina los puntos de la lista */
+    padding: 0;                         /* Elimina el padding */
+    margin: 0;                          /* Elimina el margin */
+}
+
+.formacion__elemento {
+    background: #f9f9f9;                /* Color de fondo de la tarjeta */
+    border: 1px solid #ddd;             /* Borde de la tarjeta */
+    border-radius: 8px;                 /* Bordes redondeados */
+    padding: 20px;                      /* Espacio interno de la tarjeta */
+    margin: 10px;                       /* Espacio entre tarjetas */
+    width: 300px;                       /* Ancho de cada tarjeta */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para la tarjeta */
+    display: flex;                      /* Permite que el icono y el texto se alineen en columna */
+    flex-direction: column;             /* Alinea el icono arriba y el texto abajo */
+    align-items: center;                /* Centra el contenido horizontalmente */
+}
+
+.formacion__icono {
+    width: 180px;                        /* Ancho del icono */
+    height: auto;                       /* Mantiene la proporción del icono */
+    margin-bottom: 10px;               /* Espacio entre el icono y el texto */
+}
+
+.formacion__nombre {
+    font-size: 16px;                   /* Tamaño de la fuente del nombre */
+    margin: 0;                         /* Elimina el margin */
+}
+
+.formacion__detalle {
+    font-size: 14px;                   /* Tamaño de la fuente del detalle */
+    color: #666;                       /* Color del texto del detalle */
+}
+
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+.proyectos {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.proyectos__titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.proyectos__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.proyecto {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+}
+
+.proyecto__imagen img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.proyecto__contenido {
+    padding: 1.5rem;
+}
+
+.proyecto__nombre {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.proyecto__descripcion {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.proyecto__tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.proyecto__tecnologias li {
+    font-size: 0.8rem;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.proyecto__enlaces {
+    display: flex;
+    gap: 1rem;
+}
+
+.proyecto__enlace {
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.proyecto__enlace--demo {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.proyecto__enlace--demo:hover {
+    background-color: #0056b3;
+}
+
+.proyecto__enlace--codigo {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.proyecto__enlace--codigo:hover {
+    background-color: #545b62;
+}
+
+@media (max-width: 768px) {
+    .proyectos__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+.contacto {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.contacto__contenedor {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contacto__imagen {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.contacto__texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto__titulo {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contacto__descripcion {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto__campo-contenedor {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.contacto__campo {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contacto__campo:focus {
+    outline: none;
+    border-bottom-color: #007bff;
+}
+
+.contacto__campo--textarea {
+    resize: none;
+    min-height: 100px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.contacto__campo--textarea:focus {
+    border-bottom-color: #007bff;
+}
+
+.contacto__label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.contacto__campo:focus + .contacto__label,
+.contacto__campo:not(:placeholder-shown) + .contacto__label {
+    top: -20px;
+    font-size: 0.8em;
+    color: #999; /* Cambiado a gris */
+}
+
+.contacto__boton {
+    align-self: center;
+    padding: 10px 70px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto__boton:hover {
+    background-color: #0056b3;
+}
+/*------------------------------------ Footer --------------------------------------*/
+
+.footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+    }
+
+    .cabecera__logo {
+        max-width: 40px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+}
+
