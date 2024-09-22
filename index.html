@@ -14,20 +14,26 @@
 
 <body>
     <!-- Menú -->
-    <header class="cabecera">
-        <img class="cabecera__logo" src="assets/utils/codigo.png" alt="Logo">
-        <h1 class="cabecera__titulo">Cristian Fierro</h1>
-        <nav class="navegacion">
-            <ul class="navegacion__lista">
-                <li class="navegacion__elemento"><a href="#sobre-mi">Sobre mí</a></li>
-                <li class="navegacion__elemento"><a href="#habilidades">Habilidades</a></li>
-                <li class="navegacion__elemento"><a href="#formacion">Formación</a></li>
-                <li class="navegacion__elemento"><a href="#proyectos">Proyectos</a></li>
-                <li class="navegacion__elemento"><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
 
+    <header class="encabezado__container">
+        <div class="encabezado">
+            <a href="index.html" class="encabezado__logo" title="Página principal de ExploraCol">
+                <span class="encabezado__logo--icono"></span>
+            </a>
+        
+            <nav class="encabezado__navegacion">
+                <ul class="encabezado__navegacion--lista">
+                    <li class="encabezado__navegacion--elemento"><a href="#sobre-mi">Sobre mí</a></li>
+                    <li class="encabezado__navegacion--elemento"><a href="#habilidades">Habilidades</a></li>
+                    <li class="encabezado__navegacion--elemento"><a href="#formacion">Formación</a></li>
+                    <li class="encabezado__navegacion--elemento"><a href="#proyectos">Proyectos</a></li>
+                    <li class="encabezado__navegacion--elemento"><a href="#contacto">Contacto</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    
     <!-- Sección de Presentación -->
     <section class="presentacion">
         <img class="presentacion__foto" src="assets/utils/profile.png" alt="Foto de perfil">
@@ -161,61 +167,44 @@
     <!-- Sección de Proyectos -->
     <section class="proyectos" id="proyectos">
         <h2 class="proyectos__titulo">Mis Proyectos</h2>
-        <div class="proyectos__grid">
+        <div class="proyectos__lista">
             <article class="proyecto">
-                <div class="proyecto__imagen">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Imagen del Proyecto 1" loading="lazy">
-                </div>
-                <div class="proyecto__contenido">
-                    <h3 class="proyecto__nombre">Nombre del Proyecto 1</h3>
-                    <p class="proyecto__descripcion">Breve descripción del proyecto 1. Explica qué hace y por qué es importante.</p>
-                    <ul class="proyecto__tecnologias">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                    <div class="proyecto__enlaces">
-                        <a href="#" class="proyecto__enlace proyecto__enlace--demo">Demo</a>
-                        <a href="#" class="proyecto__enlace proyecto__enlace--codigo">Código</a>
+                <div class="proyecto__contenedor">
+                    <img src="/assets/Proyectos/ExploraCol.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                    <div class="proyecto__contenido proyecto__contenido--derecha">
+                        <h3 class="proyecto__nombre">Nombre del Proyecto 1</h3>
+                        <p class="proyecto__descripcion">Breve descripción del proyecto 1. Explica qué hace y por qué es importante.</p>
+                        <ul class="proyecto__tecnologias">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="proyecto__enlaces">
+                            <a href="#" class="proyecto__enlace proyecto__enlace--demo">Demo</a>
+                            <a href="#" class="proyecto__enlace proyecto__enlace--codigo">Código</a>
+                        </div>
                     </div>
                 </div>
             </article>
             <article class="proyecto">
-                <div class="proyecto__imagen">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Imagen del Proyecto 2" loading="lazy">
-                </div>
-                <div class="proyecto__contenido">
-                    <h3 class="proyecto__nombre">Nombre del Proyecto 2</h3>
-                    <p class="proyecto__descripcion">Breve descripción del proyecto 2. Destaca las características principales y su impacto.</p>
-                    <ul class="proyecto__tecnologias">
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>MongoDB</li>
-                    </ul>
-                    <div class="proyecto__enlaces">
-                        <a href="#" class="proyecto__enlace proyecto__enlace--demo">Demo</a>
-                        <a href="#" class="proyecto__enlace proyecto__enlace--codigo">Código</a>
+                <div class="proyecto__contenedor">
+                    <img src="/assets/Proyectos/ExploraCol.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                    <div class="proyecto__contenido proyecto__contenido--izquierda">
+                        <h3 class="proyecto__nombre">Nombre del Proyecto 1</h3>
+                        <p class="proyecto__descripcion">Breve descripción del proyecto 1. Explica qué hace y por qué es importante.</p>
+                        <ul class="proyecto__tecnologias">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="proyecto__enlaces">
+                            <a href="#" class="proyecto__enlace proyecto__enlace--demo">Demo</a>
+                            <a href="#" class="proyecto__enlace proyecto__enlace--codigo">Código</a>
+                        </div>
                     </div>
                 </div>
             </article>
-            <article class="proyecto">
-                <div class="proyecto__imagen">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Imagen del Proyecto 3" loading="lazy">
-                </div>
-                <div class="proyecto__contenido">
-                    <h3 class="proyecto__nombre">Nombre del Proyecto 3</h3>
-                    <p class="proyecto__descripcion">Breve descripción del proyecto 3. Menciona los desafíos superados y las soluciones implementadas.</p>
-                    <ul class="proyecto__tecnologias">
-                        <li>Vue.js</li>
-                        <li>Firebase</li>
-                        <li>Tailwind CSS</li>
-                    </ul>
-                    <div class="proyecto__enlaces">
-                        <a href="#" class="proyecto__enlace proyecto__enlace--demo">Demo</a>
-                        <a href="#" class="proyecto__enlace proyecto__enlace--codigo">Código</a>
-                    </div>
-                </div>
-            </article>
+            <!-- Repite el patrón para más proyectos -->
         </div>
     </section>
 

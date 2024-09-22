@@ -9,7 +9,7 @@ function typeText() {
         setTimeout(typeText, typingSpeed);
     } else {
         // Una vez que termine de escribir, ocultamos la barra de escritura
-        document.getElementById('typed-text').classList.add('no-cursor');
+        document.getElementById('cursor').classList.add('hidden');
     }
 }
 
@@ -21,7 +21,7 @@ window.onload = function() {
 // Manejo de la navegación al hacer scroll
 document.addEventListener("scroll", function() {
     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".navegacion__elemento a");
+    const navLinks = document.querySelectorAll(".encabezado__navegacion--elemento a");
 
     let current = "";
 
