@@ -1,4 +1,4 @@
-const text = "Hola, mi nombre es Alura Latam y construyo páginas web";
+const text = "¡Hola, soy Cristian Fierro!";
 const typingSpeed = 70; // Milisegundos entre cada letra
 let index = 0;
 

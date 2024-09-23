@@ -3,6 +3,7 @@
     --color-secondary: #3F4E4F;
     --color-tertiary: #2C3639;
     --color-fourth: #DCD7C9;
+    --color-hover:#A5B68D;
     --color-background: #f5f5f5;
     --color-text: #333;
 
@@ -84,7 +85,7 @@ ul, ol {
 
 .encabezado__navegacion--elemento a:hover,
 .encabezado__navegacion--elemento a.active {
-    color: var(--color-primary);
+    color: var(--color-hover);
 }
 
 .menu-toggle {
@@ -134,7 +135,7 @@ ul, ol {
 }
 
 .presentacion__titulo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--color-secondary);
 }
@@ -151,6 +152,8 @@ ul, ol {
 .redes {
     display: flex;
     gap: 1rem;
+    list-style-type: none;
+    padding: 0;
 }
 
 .redes__img a {
@@ -165,6 +168,12 @@ ul, ol {
     transform: translateY(-3px);
 }
 
+.redes__img img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+}
+
 
 /* About Me Section */
 .sobre-mi {
@@ -173,7 +182,7 @@ ul, ol {
 }
 
 .sobre-mi__titulo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-secondary);
     margin-bottom: 2px;
     text-align: center;
@@ -181,12 +190,19 @@ ul, ol {
 
 .habilidades__titulo--subrayado,
 .proyectos__titulo--subrayado,
-.formacion__titulo--subrayado,
 .sobre-mi__titulo--subrayado{
     width: 180px;
     height: 4px;
-    background: var(--color-primary);
+    background: var(--color-hover);
     margin: 0 auto;
+}
+
+.contacto__titulo--subrayado {
+    width: 180px;
+    height: 4px;
+    background: var(--color-hover);
+    margin: 0 auto;
+    display: none;
 }
 
 .sobre-mi__texto {
@@ -232,7 +248,7 @@ ul, ol {
 }
 
 .habilidades__titulo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2px;
 }
 
@@ -272,7 +288,7 @@ ul, ol {
 }
 
 .formacion__titulo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-secondary);
     text-align: center;
     margin-bottom: 2px;
@@ -281,7 +297,7 @@ ul, ol {
 .formacion__titulo--subrayado {
     width: 180px;
     height: 4px;
-    background: var(--color-primary);
+    background: var(--color-hover);
     margin: 0 auto 40px;
 }
 
@@ -341,135 +357,109 @@ ul, ol {
 .proyectos {
     padding: 5% 10%;
     background-color: var(--color-fourth);
-}
-
-.proyectos__titulo {
-    font-size: 2.5rem;
+  }
+  
+  .proyectos__titulo {
+    font-size: 2rem;
     color: var(--color-secondary);
     text-align: center;
-    margin-bottom:2px;
-}
-
-.proyectos__lista {
+    margin-bottom: 2px;
+  }
+  
+  .proyectos__lista {
     padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-
-.proyecto {
-    position: relative;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .proyecto {
     border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-}
-
-.proyecto:hover {
+  }
+  
+  .proyecto:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.proyecto__contenedor {
-    position: relative;
-    width: 100%;
+  }
+  
+  .proyecto__contenedor {
+    display: flex;
     height: 100%;
-}
-
-.proyecto__imagen {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.proyecto__contenido {
-    position: absolute;
-    top: 0;
-    width: 20%; /* Reducido de 50% a 40% */
+  }
+  
+  .proyecto__imagen {
+    width: 50%;
     height: 100%;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9); /* Aumentada la opacidad para mejor legibilidad */
+    object-fit: cover;
+  }
+  
+  .proyecto__contenido {
+    width: 50%;
+    padding: 1rem;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow-y: auto; /* Permite desplazamiento si el contenido es muy largo */
-}
-
-.proyecto__contenido--derecha {
-    right: 0;
-    text-align: right;
-}
-
-.proyecto__contenido--izquierda {
-    left: 0;
-    text-align: left;
-}
-
-.proyecto__nombre {
-    font-size: 1.3rem; /* Reducido ligeramente */
+  }
+  
+  .proyecto__nombre {
+    font-size: 1.2rem;
     color: var(--color-secondary);
-    margin-bottom: 0.8rem;
-}
-
-.proyecto__descripcion {
-    font-size: 0.9rem; /* Reducido ligeramente */
+    margin-bottom: 0.6rem;
+  }
+  
+  .proyecto__descripcion {
+    font-size: 0.9rem;
     color: #666;
-    margin-bottom: 1.2rem;
-}
-
-.proyecto__tecnologias {
+    margin-bottom: 1rem;
+  }
+  
+  .proyecto__tecnologias {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    margin-bottom: 1.2rem;
-    justify-content: flex-end;
-}
-
-.proyecto__contenido--izquierda .proyecto__tecnologias {
-    justify-content: flex-start;
-}
-
-.proyecto__tecnologias li {
-    font-size: 0.8rem; /* Reducido ligeramente */
+    margin-bottom: 1rem;
+  }
+  
+  .proyecto__tecnologias li {
+    font-size: 0.8rem;
     background-color: var(--color-primary);
     color: #fff;
     padding: 0.2rem 0.6rem;
     border-radius: 12px;
-}
-
-.proyecto__enlaces {
+  }
+  
+  .proyecto__enlaces {
     display: flex;
     gap: 0.8rem;
-    justify-content: flex-end;
-}
-
-.proyecto__contenido--izquierda .proyecto__enlaces {
-    justify-content: flex-start;
-}
-
-.proyecto__enlace {
-    font-size: 0.9rem; /* Reducido ligeramente */
+  }
+  
+  .proyecto__enlace {
+    font-size: 0.9rem;
     text-decoration: none;
-    padding: 0.4rem 1.2rem;
+    padding: 0.4rem 1rem;
     border-radius: 5px;
     transition: background-color var(--transition-speed) ease;
-}
-
-.proyecto__enlace--demo {
+  }
+  
+  .proyecto__enlace--demo {
     background-color: var(--color-primary);
     color: #fff;
-}
-
-.proyecto__enlace--codigo {
+  }
+  
+  .proyecto__enlace--codigo {
     background-color: var(--color-secondary);
     color: #fff;
-}
-
-.proyecto__enlace--demo:hover,
-.proyecto__enlace--codigo:hover {
+  }
+  
+  .proyecto__enlace--demo:hover,
+  .proyecto__enlace--codigo:hover {
     background-color: var(--color-fourth);
     color: var(--color-secondary);
-}
+  }
 /* Contact Section */
 .contacto {
     padding: 5% 10%;
@@ -494,7 +484,7 @@ ul, ol {
 }
 
 .contacto__titulo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-secondary);
     margin-bottom: 1rem;
 }
@@ -548,6 +538,7 @@ ul, ol {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color var(--transition-speed) ease;
+    display: inline-block; 
 }
 
 .contacto__boton:hover {
@@ -588,7 +579,9 @@ ul, ol {
 /* Responsive Design */
 @media (max-width: 768px) {
 
-
+.redes{
+    justify-content: center; 
+}
     .menu-toggle {
         display: flex;
     }
@@ -625,20 +618,19 @@ ul, ol {
 
     .presentacion {
         padding: 5% 10%;
-        padding-top: 150px;
+        padding-top: 100px;
         flex-direction: column;
         text-align: center;
     }
 
     .presentacion__foto {
         order: 1;
-        margin-bottom: 2rem;
     }
 
     .presentacion__contenedor {
-        order: 2;
         max-width: 100%;
     }
+    
 
     .formacion__elemento {
         width: calc(50% - 2rem); /* 2 elementos por fila en pantallas medianas */
@@ -649,8 +641,21 @@ ul, ol {
     }
 
     .contacto__imagen {
-        max-width: 100%;
-        margin-bottom: 2rem;
+        display: none;
+    }
+
+    .contacto__titulo,
+    .contacto__descripcion{
+        text-align: center;
+    }
+
+    .contacto__titulo--subrayado{
+        display: block;
+    }
+
+    .contacto__boton {
+        display: block; /* Hace que el botón sea un bloque para que se pueda centrar */
+        margin: 0 auto; /* Centra el botón horizontalmente */
     }
 
     .proyecto__contenido {
@@ -672,6 +677,11 @@ ul, ol {
 }
 
 @media (max-width: 480px) {
+    .redes__img span {
+        display: none;
+    }
+
+
     .habilidades__elemento {
         width: 100px;
     }
@@ -682,5 +692,10 @@ ul, ol {
 
     .proyecto__enlaces {
         flex-direction: column;
+    }
+
+    .contacto__boton {
+        width: 100%;  /* Hace que el botón ocupe el ancho completo */
+        padding: 1rem; /* Ajusta el padding si es necesario */
     }
 }
