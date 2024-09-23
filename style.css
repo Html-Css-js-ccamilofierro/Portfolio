@@ -580,6 +580,10 @@ ul, ol {
         display: flex;
     }
 
+    .encabezado__logo--icono {
+        background-image: url('./assets/utils/Ico.png');
+    }
+
     .encabezado__navegacion {
         position: fixed;
         right: -100%;
