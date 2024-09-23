@@ -581,7 +581,8 @@ ul, ol {
     }
 
     .encabezado__logo--icono {
-        background-image: url('./assets/utils/Ico.png');
+        height: 35px;
+        background-image: url('assets/utils/ico.png');
     }
 
     .encabezado__navegacion {
