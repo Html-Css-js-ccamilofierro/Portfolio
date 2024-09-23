@@ -169,8 +169,8 @@ ul, ol {
 }
 
 .redes__img img {
-    width: 24px;
-    height: 24px;
+    max-width: 100%; /* Hace que la imagen no exceda el ancho de su contenedor */
+    height: auto;
     margin-right: 0.5rem;
 }
 
@@ -679,6 +679,11 @@ ul, ol {
 @media (max-width: 480px) {
     .redes__img span {
         display: none;
+    }
+
+    .redes__img img {
+        width: 30px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+        height: auto;
     }
 
 
