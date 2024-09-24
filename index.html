@@ -242,18 +242,16 @@
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
     <section class="contacto" id="contacto">
         <div class="contacto__contenedor">
             <img src="assets/contacto.jpg" alt="Descripción de la imagen" class="contacto__imagen">
             <div class="contacto__texto">
                 <h2 class="contacto__titulo">Contacto</h2>
                 <div class="contacto__titulo--subrayado"></div>
-                <p class="contacto__descripcion">¿Quieres contactarme?
-                    Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
-                <form class="contacto__formulario">
+                <p class="contacto__descripcion">¿Quieres contactarme? Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
+                <form class="contacto__formulario" onsubmit="return validarFormulario()">
                     <div class="contacto__campo-contenedor">
-                        <input class="contacto__campo" type="text" id="nombre" required>
+                        <input class="contacto__campo" type="text" id="nombre" maxlength="100" pattern="^[a-zA-Z\s]+$" title="El nombre solo puede contener letras y espacios" required>
                         <label for="nombre" class="contacto__label">Nombre</label>
                     </div>
                     <div class="contacto__campo-contenedor">
@@ -261,15 +259,19 @@
                         <label for="email" class="contacto__label">Correo Electrónico</label>
                     </div>
                     <div class="contacto__campo-contenedor">
-                        <input class="contacto__campo" type="text" id="asunto" required>
+                        <input class="contacto__campo" type="text" id="asunto" maxlength="100" required>
                         <label for="asunto" class="contacto__label">Asunto</label>
                     </div>
                     <div class="contacto__campo-contenedor">
-                        <textarea class="contacto__campo contacto__campo--textarea" id="mensaje" required></textarea>
+                        <textarea class="contacto__campo contacto__campo--textarea" id="mensaje" maxlength="500" required></textarea>
                         <label for="mensaje" class="contacto__label">Mensaje</label>
                     </div>
                     <button class="contacto__boton" type="submit">Enviar</button>
                 </form>
+                <!-- Notificación de éxito -->
+                <div id="mensajeExito" class="contacto__notificacion" style="display:none;">
+                    ¡El mensaje se envió correctamente!
+                </div>
             </div>
         </div>
     </section>

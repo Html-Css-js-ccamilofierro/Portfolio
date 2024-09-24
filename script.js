@@ -115,3 +115,46 @@ function initializeMenu() {
 
 // Llamar a la función cuando se carga el DOM
 document.addEventListener('DOMContentLoaded', initializeMenu);
+
+function validarFormulario() {
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const asunto = document.getElementById("asunto").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    // Validar formato de nombre
+    const nombreRegex = /^[a-zA-Z\s]+$/;
+    if (!nombreRegex.test(nombre)) {
+        alert("El nombre solo puede contener letras y espacios.");
+        return false;
+    }
+
+    // Validar longitud de los campos
+    if (nombre.length > 100) {
+        alert("El nombre no puede ser mayor a 100 caracteres.");
+        return false;
+    }
+    if (asunto.length > 100) {
+        alert("El asunto no puede ser mayor a 100 caracteres.");
+        return false;
+    }
+    if (mensaje.length > 500) {
+        alert("El mensaje no puede ser mayor a 500 caracteres.");
+        return false;
+    }
+
+    // Si todas las validaciones pasan, muestra el mensaje de éxito
+    mostrarMensajeExito();
+
+    return false; // Detenemos el envío real del formulario para fines de demostración
+}
+
+function mostrarMensajeExito() {
+    const mensajeExito = document.getElementById("mensajeExito");
+    mensajeExito.style.display = "block"; // Mostrar el mensaje
+
+    // Ocultar el mensaje después de 3 segundos
+    setTimeout(() => {
+        mensajeExito.style.display = "none";
+    }, 3000);
+}

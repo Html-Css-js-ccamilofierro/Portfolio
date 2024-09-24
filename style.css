@@ -546,6 +546,16 @@ ul, ol {
     color: var(--color-secondary);
 }
 
+.contacto__notificacion {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 /* Footer */
 .footer {
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5);
@@ -632,8 +642,22 @@ ul, ol {
     }
     
 
-    .formacion__elemento {
-        width: calc(50% - 2rem); /* 2 elementos por fila en pantallas medianas */
+    .proyecto__contenedor {
+        flex-direction: column;
+    }
+
+    .proyecto__imagen {
+        width: 100%;
+        height: 200px; /* Ajusta esta altura según tus necesidades */
+    }
+
+    .proyecto__contenido {
+        width: 100%;
+    }
+
+    .proyecto__contenido--derecha,
+    .proyecto__contenido--izquierda {
+        order: 2; /* Asegura que el contenido siempre esté debajo de la imagen */
     }
 
     .contacto__contenedor {
@@ -691,12 +715,55 @@ ul, ol {
         width: 100px;
     }
 
-    .formacion__elemento {
-        width: calc(100% - 2rem); /* 1 elemento por fila en pantallas pequeñas */
+    .formacion__titulo {
+        font-size: 1.5rem;
     }
 
-    .proyecto__enlaces {
+    .formacion__lista {
+        gap: 1rem;
+    }
+
+    .formacion__elemento {
+        width: 100%;
+        max-width: none;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .formacion__icono {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .formacion__contenido {
+        width: 100%;
+    }
+
+    .formacion__nombre {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .formacion__detalle {
+        font-size: 0.9rem;
+    }
+
+    .proyecto__contenedor {
+        flex-direction: column;
+    }
+
+    .proyecto__imagen {
+        width: 90%;
+    }
+
+    .proyecto__contenido {
+        width: 80%;
+    }
+
+    .proyecto__contenido--derecha,
+    .proyecto__contenido--izquierda {
+        order: 2; /* Asegura que el contenido siempre esté debajo de la imagen */
     }
 
     .contacto__boton {
