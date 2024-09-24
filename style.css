@@ -151,7 +151,7 @@ ul, ol {
 
 .redes {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     list-style-type: none;
     padding: 0;
 }
@@ -588,17 +588,24 @@ ul, ol {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
-.redes{
-    justify-content: center; 
-}
     .menu-toggle {
         display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 10;
     }
 
-    .encabezado__logo--icono {
-        height: 35px;
-        background-image: url('assets/utils/ico.png');
+    .menu-toggle .bar {
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-background);
+        transition: all 0.3s linear;
     }
 
     .encabezado__navegacion {
@@ -626,21 +633,43 @@ ul, ol {
         margin: 10px 0;
     }
 
+    .encabezado__logo--icono {
+        height: 35px;
+        background-image: url('assets/utils/ico.png');
+    }
+
     .presentacion {
-        padding: 5% 10%;
-        padding-top: 100px;
         flex-direction: column;
         text-align: center;
+        padding: 100px 5% 5%;
     }
 
     .presentacion__foto {
         order: 1;
+        margin-bottom: 20px;
     }
 
     .presentacion__contenedor {
+        order: 2;
         max-width: 100%;
     }
-    
+
+    .redes {
+        justify-content: center;
+    }
+
+    .proyectos {
+        padding: 5% 5%;
+    }
+
+    .proyectos__lista {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto {
+        width: 100%;
+        max-width: 100%;
+    }
 
     .proyecto__contenedor {
         flex-direction: column;
@@ -648,30 +677,43 @@ ul, ol {
 
     .proyecto__imagen {
         width: 100%;
-        height: 200px; /* Ajusta esta altura según tus necesidades */
+        height: 200px;
     }
 
     .proyecto__contenido {
         width: 100%;
+        box-sizing: border-box;
+        text-align: center;
     }
 
-    .proyecto__contenido--derecha,
-    .proyecto__contenido--izquierda {
-        order: 2; /* Asegura que el contenido siempre esté debajo de la imagen */
+    .proyecto__nombre,
+    .proyecto__descripcion,
+    .proyecto__tecnologias {
+        text-align: center;
     }
 
+    .proyecto__tecnologias {
+        justify-content: center;
+    }
+
+    .proyecto__enlaces {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .proyecto__enlace {
+        width: auto;
+        display: inline-block;
+    }
+    
     .contacto__contenedor {
         flex-direction: column;
-    }
-
-    .contacto__imagen {
-        display: none;
     }
 
     .contacto__titulo,
     .contacto__descripcion{
         text-align: center;
-    }
+    }    
 
     .contacto__titulo--subrayado{
         display: block;
@@ -682,21 +724,12 @@ ul, ol {
         margin: 0 auto; /* Centra el botón horizontalmente */
     }
 
-    .proyecto__contenido {
+    .contacto__imagen {
+        display: none;
+    }
+
+    .contacto__texto {
         width: 100%;
-        height: auto;
-        position: static;
-        background-color: #fff;
-    }
-
-    .proyecto__contenido--derecha,
-    .proyecto__contenido--izquierda {
-        text-align: center;
-    }
-
-    .proyecto__tecnologias,
-    .proyecto__enlaces {
-        justify-content: center;
     }
 }
 
@@ -706,68 +739,46 @@ ul, ol {
     }
 
     .redes__img img {
-        width: 30px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+        width: 30px;
         height: auto;
     }
-
 
     .habilidades__elemento {
         width: 100px;
     }
 
-    .formacion__titulo {
-        font-size: 1.5rem;
-    }
-
-    .formacion__lista {
-        gap: 1rem;
-    }
-
     .formacion__elemento {
         width: 100%;
-        max-width: none;
+    }
+
+    .proyectos {
+        padding: 5% 3%;
+    }
+
+    .proyecto__nombre {
+        font-size: 1.1rem;
+    }
+
+    .proyecto__descripcion {
+        font-size: 0.85rem;
+    }
+
+    .proyecto__tecnologias li {
+        font-size: 0.75rem;
+    }
+
+    .proyecto__enlaces {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 
-    .formacion__icono {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 1rem;
-    }
-
-    .formacion__contenido {
-        width: 100%;
-    }
-
-    .formacion__nombre {
-        font-size: 1rem;
-        margin-bottom: 0.25rem;
-    }
-
-    .formacion__detalle {
-        font-size: 0.9rem;
-    }
-
-    .proyecto__contenedor {
-        flex-direction: column;
-    }
-
-    .proyecto__imagen {
+    .proyecto__enlace {
         width: 90%;
+        text-align: center;
+        margin-bottom: 0.5rem;
     }
-
-    .proyecto__contenido {
-        width: 80%;
-    }
-
-    .proyecto__contenido--derecha,
-    .proyecto__contenido--izquierda {
-        order: 2; /* Asegura que el contenido siempre esté debajo de la imagen */
-    }
-
+    
     .contacto__boton {
-        width: 100%;  /* Hace que el botón ocupe el ancho completo */
-        padding: 1rem; /* Ajusta el padding si es necesario */
+        width: 100%;
     }
 }
