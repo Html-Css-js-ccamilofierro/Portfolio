@@ -158,3 +158,108 @@ function mostrarMensajeExito() {
         mensajeExito.style.display = "none";
     }, 3000);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const formacionElements = document.querySelectorAll('.formacion__elemento');
+    
+    const animateOnScroll = () => {
+        const triggerBottom = window.innerHeight / 5 * 4;
+        
+        formacionElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            
+            if (elementTop < triggerBottom) {
+                element.classList.add('animate');
+            }
+        });
+    };
+    
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Llamar la función una vez para elementos que ya están en la vista
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            animateSkills();
+            observer.disconnect();
+        }
+    }, { threshold: 0.1 });
+
+    const skillsSection = document.querySelector('.habilidades__lista');
+    if (skillsSection) {
+        observer.observe(skillsSection);
+    }
+
+    function animateSkills() {
+        const skillElements = document.querySelectorAll('.habilidades__elemento');
+        skillElements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('animate');
+            }, index * 100);
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '50px' });
+
+    const proyectos = document.querySelectorAll('.proyecto');
+    proyectos.forEach(proyecto => {
+        observer.observe(proyecto);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                if (entry.target.classList.contains('contacto__formulario')) {
+                    animateFormFields(entry.target);
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Target all sections that need animations
+    const animateSections = [
+        '.sobre-mi',
+        '.habilidades',
+        '.formacion',
+        '.proyectos',
+        '.contacto'
+    ];
+
+    animateSections.forEach(section => {
+        const elements = document.querySelectorAll(`${section} .animate-element`);
+        elements.forEach(el => observer.observe(el));
+    });
+
+    // Specific handling for project cards
+    const proyectos = document.querySelectorAll('.proyecto');
+    proyectos.forEach(proyecto => {
+        observer.observe(proyecto);
+    });
+
+    // Specific handling for contact form
+    const contactElements = document.querySelectorAll('.contacto__imagen, .contacto__descripcion, .contacto__formulario');
+    contactElements.forEach(el => observer.observe(el));
+
+    function animateFormFields(form) {
+        const fields = form.querySelectorAll('.contacto__campo-contenedor, .contacto__boton');
+        fields.forEach((field, index) => {
+            setTimeout(() => {
+                field.classList.add('animate');
+            }, index * 100);
+        });
+    }
+});
