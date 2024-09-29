@@ -159,25 +159,6 @@ function mostrarMensajeExito() {
     }, 3000);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const formacionElements = document.querySelectorAll('.formacion__elemento');
-    
-    const animateOnScroll = () => {
-        const triggerBottom = window.innerHeight / 5 * 4;
-        
-        formacionElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            
-            if (elementTop < triggerBottom) {
-                element.classList.add('animate');
-            }
-        });
-    };
-    
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Llamar la función una vez para elementos que ya están en la vista
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
@@ -262,4 +243,49 @@ document.addEventListener('DOMContentLoaded', function() {
             }, index * 100);
         });
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.encabezado__container');
+    
+    
+    setTimeout(() => {
+        header.classList.add('visible');
+    }, 100);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const carousels = document.querySelectorAll('.carousel');
+    
+    carousels.forEach(carousel => {
+        const images = carousel.querySelectorAll('.proyecto__imagen');
+        const prevButton = carousel.querySelector('.prev');
+        const nextButton = carousel.querySelector('.next');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach(img => img.classList.remove('active'));
+            images[index].classList.add('active');
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        nextButton.addEventListener('click', nextImage);
+        prevButton.addEventListener('click', prevImage);
+
+        // Mostrar la primera imagen al cargar
+        showImage(currentIndex);
+
+        // Cambio automático de imagen cada 5 segundos
+        setInterval(nextImage, 3000);
+    });
 });

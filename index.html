@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/utils/ico.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fuente del Proyecto Raleway -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Mi Portafolio</title>
 </head>
 
@@ -62,7 +64,7 @@
                     </a>
                 </li>
                 <li class="redes__img">
-                    <a href="https://www.instagram.com/ccamilofierro" target="_blank">
+                    <a href="https://www.instagram.com/cf.software.co/" target="_blank">
                         <img src="assets/utils/instagram.png" alt="Instagram">
                         <span>Instagram</span>
                     </a>
@@ -79,8 +81,8 @@
 
     <!-- Sección sobre mí -->
     <section class="sobre-mi" id="sobre-mi">
-        <h2 class="sobre-mi__titulo animate-element">Sobre mí</h2>
-        <div class="sobre-mi__titulo--subrayado animate-element"></div>
+        <h2 class="section__title animate-element">Sobre mí</h2>
+        <div class="section__title--underlined animate-element"></div>
         <p class="sobre-mi__texto animate-element">Me especializo en crear aplicaciones web modernas y funcionales utilizando las últimas 
             tecnologías. Mi enfoque está en el desarrollo de soluciones que combinen una experiencia de usuario intuitiva 
             con un código limpio y eficiente.</p>
@@ -100,8 +102,9 @@
         </video>
         <div class="habilidades__overlay"></div>
         <div class="habilidades__content">
-            <h2 class="habilidades__titulo animate-element">Habilidades</h2>
-            <div class="habilidades__titulo--subrayado animate-element"></div>
+            <h2 class="skill__title animate-element">Habilidades</h2>
+            <div class="section__title--underlined animate-element"></div>
+            <p class="habilidades__descripcion animate-element">Estas son las tecnologías y herramientas que domino y utilizo en mis proyectos de desarrollo web.</p>
             <ul class="habilidades__lista">
                 <li class="habilidades__elemento">
                     <img class="habilidades__icono" src="assets/technologies/html.png" alt="HTML">
@@ -195,16 +198,27 @@
         </ul>
     </section>
 
-
     <!-- Sección de Proyectos -->
     <section class="proyectos" id="proyectos">
-        <h2 class="proyectos__titulo animate-element">Mis Proyectos</h2>
-        <div class="proyectos__titulo--subrayado animate-element"></div>
+        <h2 class="section__title animate-element">Mis Proyectos</h2>
+        <div class="section__title--underlined animate-element"></div>
+        <p class="proyectos__descripcion animate-element">Aquí puedes ver una selección de mis trabajos más recientes, que demuestran mis habilidades en desarrollo web y diseño de interfaces.</p>
         <div class="proyectos__lista">
             <article class="proyecto animate-project">
                 <div class="proyecto__contenedor">
-                    <img src="/assets/Proyectos/ExploraCol.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
-                    <div class="proyecto__contenido proyecto__contenido--derecha">
+                    <div class="proyecto__imagen-container">
+                        <div class="carousel">
+                           
+                            <img src="/assets/Proyectos/ExploraCol-1.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen active">
+                            <img src="/assets/Proyectos/ExploraCol-2.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                            <img src="/assets/Proyectos/ExploraCol-3.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                            <img src="/assets/Proyectos/ExploraCol-4.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                            <button class="carousel-button prev">&lt;</button>
+                            <button class="carousel-button next">&gt;</button>
+                        </div>
+                        <div class="proyecto__imagen-overlay"></div>
+                    </div>
+                    <div class="proyecto__contenido">
                         <h3 class="proyecto__nombre">Agencia de viajes</h3>
                         <p class="proyecto__descripcion">Los usuarios pueden explorar destinos, encontrar paquetes personalizados y reservar sus próximos viajes</p>
                         <ul class="proyecto__tecnologias">
@@ -213,30 +227,41 @@
                             <li>JavaScript</li>
                         </ul>
                         <div class="proyecto__enlaces">
-                            <a href="#" class="proyecto__enlace proyecto__enlace--demo">Demo</a>
+                            <a href="https://html-css-js-ccamilofierro.github.io/ExploraCol/index.html" class="proyecto__enlace proyecto__enlace--demo" target="_blank">Demo</a>
                             <a href="#" class="proyecto__enlace proyecto__enlace--codigo">Código</a>
                         </div>
                     </div>
                 </div>
             </article>
-            <article class="proyecto animate-project">
+            <!--
+            <article class="proyecto animate-project proyecto--invertido">
                 <div class="proyecto__contenedor">
-                    <img src="/assets/Proyectos/ExploraCol.png" alt="Imagen del Proyecto 2" loading="lazy" class="proyecto__imagen">
-                    <div class="proyecto__contenido proyecto__contenido--izquierda">
-                        <h3 class="proyecto__nombre">Nombre del Proyecto 2</h3>
-                        <p class="proyecto__descripcion">Breve descripción del proyecto 2. Explica qué hace y por qué es importante.</p>
+                    <div class="proyecto__imagen-container">
+                        <div class="carousel">
+                            <img src="/assets/Proyectos/ExploraCol-4.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen active">
+                            <img src="/assets/Proyectos/ExploraCol.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                            <img src="/assets/Proyectos/ExploraCol-2.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                            <button class="carousel-button prev">&lt;</button>
+                            <button class="carousel-button next">&gt;</button>
+                        </div>
+                        <div class="proyecto__imagen-overlay"></div>
+                    </div>
+                    <div class="proyecto__contenido">
+                        <h3 class="proyecto__nombre">Agencia de viajes</h3>
+                        <p class="proyecto__descripcion">Los usuarios pueden explorar destinos, encontrar paquetes personalizados y reservar sus próximos viajes</p>
                         <ul class="proyecto__tecnologias">
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>JavaScript</li>
                         </ul>
                         <div class="proyecto__enlaces">
-                            <a href="#" class="proyecto__enlace proyecto__enlace--demo">Demo</a>
+                            <a href="https://html-css-js-ccamilofierro.github.io/ExploraCol/index.html" class="proyecto__enlace proyecto__enlace--demo" target="_blank">Demo</a>
                             <a href="#" class="proyecto__enlace proyecto__enlace--codigo">Código</a>
                         </div>
                     </div>
                 </div>
             </article>
+            -->
         </div>
     </section>
 
@@ -244,8 +269,9 @@
         <div class="contacto__contenedor">
             <img src="assets/contacto.jpg" alt="Descripción de la imagen" class="contacto__imagen animate-element">
             <div class="contacto__texto">
-                <h2 class="contacto__titulo animate-element">Contacto</h2>
-                <div class="contacto__titulo--subrayado animate-element"></div>
+                <h2 class="section__title animate-element">Contacto</h2>
+                <div class="section__title--underlined
+ animate-element"></div>
                 <p class="contacto__descripcion animate-element">¿Quieres contactarme? Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
                 <form class="contacto__formulario animate-element" onsubmit="return validarFormulario()">
                     <div class="contacto__campo-contenedor">
