@@ -8,50 +8,15 @@
     --color-text: #333;
     --color-primary-rgb: 162, 123, 92;
     --transition-speed: 0.3s;
-
-    --font-primary: 'Fira Code', monospace;
-    --font-secondary: 'Raleway', sans-serif;
 }
 
 body {
-    font-family: var(--font-primary);
+    font-family: 'Raleway', sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.6;
     margin: 0;
     transition: background-color var(--transition-speed) ease;
-}
-
-p, .contacto__descripcion, .proyecto__descripcion, .formacion__descripcion, .habilidades__descripcion {
-    font-family: var(--font-primary);
-    line-height: 1.6;
-}
-
-/* Mantener la fuente sans-serif para los títulos y elementos de navegación */
-h1, h2, h3, h4, h5, h6, .encabezado__navegacion--elemento a, .proyecto__nombre, .formacion__nombre {
-    font-family: var(--font-secondary);
-}
-
-p, .contacto__descripcion, .proyecto__descripcion, .formacion__descripcion, .habilidades__descripcion {
-    letter-spacing: -0.03em;
-}
-
-/* Ajustar el tamaño de fuente para mejorar la legibilidad */
-.sobre-mi__texto, .habilidades__descripcion, .formacion__descripcion, .proyectos__descripcion {
-    font-size: 0.95rem;
-}
-
-/* Estilos específicos para elementos de código o tecnologías */
-.proyecto__tecnologias li, .habilidades__nombre {
-    font-family: var(--font-primary);
-    font-weight: 500;
-}
-
-/* Ajustar el estilo de los botones para que coincidan con la estética de desarrollador */
-.contacto__boton, .proyecto__enlace {
-    font-family: var(--font-primary);
-    font-weight: 600;
-    letter-spacing: 0.05em;
 }
 
 ul, ol {
