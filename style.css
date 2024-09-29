@@ -138,7 +138,6 @@ ul, ol {
     align-items: center;
     justify-content: space-between;
     padding: 150px;
-    background-color: var(--color-fourth);
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -232,7 +231,7 @@ ul, ol {
 /* About Me Section */
 .sobre-mi {
     padding: 5% 10%;
-   
+    background-color: var(--color-fourth);
 }
 
 .sobre-mi__texto {
