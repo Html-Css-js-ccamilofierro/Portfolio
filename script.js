@@ -1,4 +1,4 @@
-const text = "¡Hola, me llamo Cristian Fierro!";
+const text = "¡Hola, soy un desarrollador full stack !";
 const typingSpeed = 70; // Milisegundos entre cada letra
 let index = 0;
 

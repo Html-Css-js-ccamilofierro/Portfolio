@@ -134,7 +134,7 @@ ul, ol {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 150px ;
+    padding: 150px 150px 0 150px;
     max-width: 1200px;
     margin: 0 auto;
     background: linear-gradient(to bottom, var(--color-fourth), var(--color-background));
@@ -224,7 +224,7 @@ ul, ol {
 
 /* About Me Section */
 .sobre-mi {
-    padding: 5rem 0;
+    padding: 70px 10px 50px 10px;
     background: linear-gradient(to bottom, var(--color-background), var(--color-fourth));
   }
   
@@ -321,7 +321,7 @@ ul, ol {
 /* Skills Section */
 .habilidades {
     position: relative;
-    padding: 5% 10%;
+    padding: 70px 30px 50px 30px;
     overflow: hidden;
 }
 
@@ -434,7 +434,7 @@ ul, ol {
 /* Formation Section */
 
 .formacion {
-    padding: 5% 10%;
+    padding: 70px 30px 0 30px;
     background: linear-gradient(to bottom, var(--color-fourth), var(--color-background));
 }
 
@@ -541,7 +541,7 @@ ul, ol {
 
 /* Projects Section */
 .proyectos {
-    padding: 5% 10%;
+    padding: 70px 100px 50px 100px;
     background: linear-gradient(to bottom, var(--color-background), var(--color-fourth));
     overflow: hidden;
 }
@@ -1022,19 +1022,16 @@ ul, ol {
     .presentacion {
         flex-direction: column;
         text-align: center;
-        padding: 100px 5% 5%;
-    }
-
-    .presentacion__foto {
-        order: 1;
-        margin-bottom: 20px;
-        width: 200px;
-        height: 200px;
+        padding: 100px 3% 3%;
     }
 
     .presentacion__contenedor {
         order: 2;
         max-width: 100%;
+    }
+
+    .sobre-mi{
+        padding: 60px 3% 15% 3%;
     }
 
     .sobre-mi__grid {
@@ -1064,7 +1061,7 @@ ul, ol {
     }
 
     .proyectos {
-        padding: 5% 5%;
+        padding: 60px 3% 3%;
     }
 
     .proyecto__contenedor,
@@ -1106,6 +1103,10 @@ ul, ol {
     .proyecto__enlace {
         margin-bottom: 0.5rem; /* Add some space between buttons when they wrap */
     }
+
+    .contacto{
+        padding: 60px 3% 15% 3%;
+    }
     
     .contacto__contenedor {
         flex-direction: column;
@@ -1141,8 +1142,8 @@ ul, ol {
     }
 
     .presentacion__foto {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
     }
 
     .presentacion__titulo {
@@ -1153,19 +1154,11 @@ ul, ol {
         font-size: 1rem;
     }
 
-    .sobre-mi__card {
-        padding: 1rem;
-    }
-
     .habilidades__elemento {
         width: 100px;
     }
     .redes{
         gap: 1rem;
-    }
-
-    .proyectos {
-        padding: 5% 3%;
     }
 
     .proyecto__contenido {
