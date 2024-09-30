@@ -24,26 +24,26 @@ ul, ol {
     margin: 0;
 }
 
-.encabezado__container {    
+.encabezado__container {
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
     background: var(--color-tertiary);
     width: 100%;
     padding: 20px 0;
-    position: fixed; 
+    position: fixed;
     top: 0;
-    left: 0; 
+    left: 0;
     z-index: 1000;
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(-100%);
-  }
+}
 
-  .encabezado__container.visible {
+.encabezado__container.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.encabezado{
+.encabezado {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -51,34 +51,32 @@ ul, ol {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
 
-  .encabezado__logo--icono {
+.encabezado__logo--icono {
     display: block;
     width: 200px;
     height: 50px;
     background-image: url('./assets/utils/Ico-large.png');
     background-size: contain;
     background-repeat: no-repeat;
-  }
-  
-  .encabezado__navegacion--lista {
+}
+
+.encabezado__navegacion--lista {
     display: flex;
     color: var(--color-background);
     gap: 40px;
     list-style-type: none;
-  }
-  
-  .encabezado__navegacion--elemento a {
+}
+
+.encabezado__navegacion--elemento a {
     color: var(--color-background);
     font-size: 18px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
-  }
+}
 
   .encabezado__navegacion--elemento a::after {
     content: '';
@@ -136,7 +134,7 @@ ul, ol {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 150px;
+    padding: 150px ;
     max-width: 1200px;
     margin: 0 auto;
     background: linear-gradient(to bottom, var(--color-fourth), var(--color-background));
@@ -150,10 +148,6 @@ ul, ol {
     object-fit: cover;
     transition: transform var(--transition-speed) ease;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.presentacion__foto:hover {
-    transform: scale(1.05) rotate(5deg);
 }
 
 .presentacion__contenedor {
@@ -264,26 +258,36 @@ ul, ol {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-  }
-  
-  .sobre-mi__card {
+}
+
+.sobre-mi__card {
     background-color: var(--color-background);
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s, box-shadow 0.3s;
+}
+
+  .sobre-mi__card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
   }
-  
+
   .sobre-mi__icon {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     color: var(--color-primary);
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
     display: block;
+    transition: transform 0.3s;
   }
   
+  .sobre-mi__card:hover .sobre-mi__icon {
+    transform: scale(1.1) rotate(5deg);
+  }
+
   .sobre-mi__texto {
     text-align: center;
     color: var(--color-text);
@@ -311,21 +315,8 @@ ul, ol {
     opacity: 1;
     transform: translateY(0);
   }
-  
-  .sobre-mi.animate .sobre-mi__card:nth-child(1),
-  .sobre-mi.animate .sobre-mi__card:nth-child(1) .sobre-mi__texto {
-    transition-delay: 0.3s;
-  }
-  
-  .sobre-mi.animate .sobre-mi__card:nth-child(2),
-  .sobre-mi.animate .sobre-mi__card:nth-child(2) .sobre-mi__texto {
-    transition-delay: 0.4s;
-  }
-  
-  .sobre-mi.animate .sobre-mi__card:nth-child(3),
-  .sobre-mi.animate .sobre-mi__card:nth-child(3) .sobre-mi__texto {
-    transition-delay: 0.5s;
-  }
+
+
   
 /* Skills Section */
 .habilidades {
@@ -916,6 +907,15 @@ ul, ol {
 }
 
 @media (max-width: 1200px) {
+    .encabezado__logo--icono {
+        width: 150px;
+        height: 40px;
+    }
+
+    .encabezado__navegacion--lista {
+        gap: 20px;
+    }
+
     .menu-toggle {
         display: flex;
         flex-direction: column;
@@ -966,6 +966,14 @@ ul, ol {
         background-image: url('assets/utils/ico.png');
     }
 
+.presentacion {
+        padding: 120px 5% 5%;
+    }
+
+    .sobre-mi__grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
     .formacion__elemento {
         width: calc(50% - 2rem);
     }
@@ -1009,7 +1017,7 @@ ul, ol {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-   
+
 
     .presentacion {
         flex-direction: column;
@@ -1020,11 +1028,21 @@ ul, ol {
     .presentacion__foto {
         order: 1;
         margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
     }
 
     .presentacion__contenedor {
         order: 2;
         max-width: 100%;
+    }
+
+    .sobre-mi__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-mi__grid {
+        grid-template-columns: 1fr;
     }
 
     .redes {
@@ -1045,7 +1063,49 @@ ul, ol {
         max-width: 400px;
     }
 
-    
+    .proyectos {
+        padding: 5% 5%;
+    }
+
+    .proyecto__contenedor,
+    .proyecto--invertido .proyecto__contenedor {
+        flex-direction: column;
+    }
+
+    .proyecto__imagen-container,
+    .proyecto__contenido {
+        width: 100%;
+    }
+
+    .proyecto__contenido {
+        padding: 1rem;
+        text-align: center;
+        box-sizing: border-box; /* Ensure padding is included in width calculation */
+    }
+
+    .proyecto__nombre {
+        font-size: 1.2rem;
+        word-wrap: break-word; /* Allow long words to break */
+    }
+
+    .proyecto__descripcion {
+        font-size: 0.9rem;
+        word-wrap: break-word; /* Allow long words to break */
+    }
+
+    .proyecto__tecnologias {
+        justify-content: center;
+        flex-wrap: wrap; /* Allow tags to wrap to next line if needed */
+    }
+
+    .proyecto__enlaces {
+        justify-content: center;
+        flex-wrap: wrap; /* Allow buttons to wrap to next line if needed */
+    }
+
+    .proyecto__enlace {
+        margin-bottom: 0.5rem; /* Add some space between buttons when they wrap */
+    }
     
     .contacto__contenedor {
         flex-direction: column;
@@ -1075,6 +1135,28 @@ ul, ol {
 
 @media (max-width: 480px) {
 
+    .encabezado__logo--icono {
+        width: 100px;
+        height: 30px;
+    }
+
+    .presentacion__foto {
+        width: 150px;
+        height: 150px;
+    }
+
+    .presentacion__titulo {
+        font-size: 2rem;
+    }
+
+    .presentacion__subtitulo {
+        font-size: 1rem;
+    }
+
+    .sobre-mi__card {
+        padding: 1rem;
+    }
+
     .habilidades__elemento {
         width: 100px;
     }
@@ -1083,58 +1165,41 @@ ul, ol {
     }
 
     .proyectos {
-        padding: 5% 5%; /* Reducir el padding lateral */
-    }
-
-    .proyecto {
-        width: 100%; /* Asegurar que el proyecto ocupe todo el ancho */
-    }
-
-    .proyecto__imagen-container,
-    .proyecto__contenido {
-        width: 100%;
+        padding: 5% 3%;
     }
 
     .proyecto__contenido {
-        padding: 6px;
-        text-align: center;
-    }
-
-    .proyecto__imagen {
-        height: auto;
+        padding: 0.8rem;
     }
 
     .proyecto__nombre {
-        font-size: 1.2rem; /* Reducir ligeramente el tamaño del título */
+        font-size: 1.1rem;
     }
 
     .proyecto__descripcion {
-        font-size: 0.9rem; /* Reducir ligeramente el tamaño de la descripción */
+        font-size: 0.85rem;
     }
 
     .proyecto__tecnologias {
-        gap: 0.4rem; /* Reducir el espacio entre las tecnologías */
+        gap: 0.4rem;
     }
 
     .proyecto__tecnologias li {
-        font-size: 0.8rem; /* Reducir el tamaño de la fuente de las tecnologías */
-        padding: 0.2rem 0.6rem; /* Reducir el padding de las tecnologías */
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
     }
 
     .proyecto__enlaces {
         flex-direction: column;
         gap: 0.5rem;
-        max-width: 95%;
     }
 
     .proyecto__enlace {
         width: 100%;
         text-align: center;
-        padding: 0.7rem 0; 
-        font-size: 0.9rem; 
-        white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
-        overflow: hidden; /* Ocultar cualquier desbordamiento */
-        text-overflow: ellipsis; /* Mostrar puntos suspensivos si el texto es demasiado largo */
+        padding: 0.6rem 0;
+        font-size: 0.85rem;
+        box-sizing: border-box; /* Ensure padding is included in width calculation */
     }
     
     .contacto__boton {
