@@ -41,37 +41,37 @@
     
     <!-- Sección de Presentación -->
     <section class="presentacion">
-        <img class="presentacion__foto" src="assets/utils/profile.png" alt="Foto de perfil">
+        <img class="presentacion__foto" src="assets/utils/profile.webp" alt="Foto de perfil">
         <div class="presentacion__contenedor">
             <h2 id="typed-text" class="presentacion__titulo">
                 <span id="text"></span><span id="cursor" class="cursor">|</span>
             </h2>
             
-            <p class="presentacion__subtitulo">Desarrollador Full Stack con pasión por crear soluciones web modernas 
-                y eficientes. Combino diseño intuitivo con tecnologías avanzadas para transformar ideas en productos 
+            <p class="presentacion__subtitulo">Soy un desarrollador Full Stack apasionado por crear soluciones web modernas 
+                y eficientes. Me gusta combinar diseños intuitivos con tecnologías avanzadas para transformar ideas en productos 
                 digitales funcionales y atractivos.</p>
             <ul class="redes">
                 <li class="redes__img">
                     <a href="https://github.com/ccamilofierro" target="_blank">
-                        <img src="assets/utils/github-sign.png" alt="Github">
+                        <img src="assets/utils/github-sign.webp" alt="Github">
                         <span>Github</span>
                     </a>
                 </li>
                 <li class="redes__img">
                     <a href="https://www.linkedin.com/in/ccamilofierro" target="_blank">
-                        <img src="assets/utils/linkedin.png" alt="Linkedin">
+                        <img src="assets/utils/linkedin.webp" alt="Linkedin">
                         <span>Linkedin</span>
                     </a>
                 </li>
                 <li class="redes__img">
                     <a href="https://www.instagram.com/cf.software.co/" target="_blank">
-                        <img src="assets/utils/instagram.png" alt="Instagram">
+                        <img src="assets/utils/instagram.webp" alt="Instagram">
                         <span>Instagram</span>
                     </a>
                 </li>
                 <li class="redes__img">
                     <a href="https://drive.google.com/file/d/1xADWYD0n2IJDUQOn_EnuNXPFKJ8-Ronj/view" target="_blank">
-                        <img src="assets/utils/cv.png" alt="Currículo">
+                        <img src="assets/utils/cv.webp" alt="Currículo">
                         <span>Currículo</span>
                     </a>
                 </li>
@@ -81,25 +81,44 @@
 
     <!-- Sección sobre mí -->
     <section class="sobre-mi" id="sobre-mi">
-        <h2 class="section__title animate-element">Sobre mí</h2>
-        <div class="section__title--underlined animate-element"></div>
-        <p class="sobre-mi__texto animate-element">Me especializo en crear aplicaciones web modernas y funcionales utilizando las últimas 
-            tecnologías. Mi enfoque está en el desarrollo de soluciones que combinen una experiencia de usuario intuitiva 
-            con un código limpio y eficiente.</p>
-        <p class="sobre-mi__texto animate-element">Con experiencia en frontend (Angular, React, HTML, CSS, JavaScript) y backend 
-            (Java, Python, Spring Boot, MongoDB, MySQL), me encanta tomar desafíos que implican resolver problemas complejos 
-            y transformarlos en soluciones digitales.</p>
-        <p class="sobre-mi__texto animate-element">Soy apasionado por aprender nuevas herramientas y mejorar continuamente mis 
-            habilidades, buscando siempre estar a la vanguardia en tendencias tecnológicas. Mi objetivo es no 
-            solo desarrollar software, sino también aportar valor con cada proyecto en el que trabajo.</p>
-    </section>
+        <div class="container">
+          <h2 class="section__title">Sobre mí</h2>
+          <div class="section__title--underlined"></div>
+          <div class="sobre-mi__grid">
+            <div class="sobre-mi__card">
+              <svg class="sobre-mi__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <p class="sobre-mi__texto">Me especializo en crear aplicaciones web modernas y funcionales utilizando las últimas 
+                  tecnologías. Mi enfoque está en el desarrollo de soluciones que combinen una experiencia de usuario intuitiva 
+                  con un código limpio y eficiente.</p>
+            </div>
+            <div class="sobre-mi__card">
+              <svg class="sobre-mi__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              <p class="sobre-mi__texto">Cuento con experiencia en frontend (Angular, React, HTML, CSS, JavaScript) y backend 
+                  (Java, Python, Spring Boot, MongoDB, MySQL), ademas me encanta tomar desafíos que implican resolver problemas complejos 
+                  y transformarlos en soluciones digitales.</p>
+            </div>
+            <div class="sobre-mi__card">
+              <svg class="sobre-mi__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <p class="sobre-mi__texto">Soy un apasionado por aprender nuevas herramientas y asi mejorar continuamente mis 
+                  habilidades, siempre busco estar a la vanguardia en tendencias tecnológicas. Mi objetivo es no 
+                  solo desarrollar software, sino también aportar valor con cada proyecto en el que trabajo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     
     <!-- Sección de Habilidades -->
     <section class="habilidades" id="habilidades">
-        <video class="habilidades__video" autoplay muted loop>
-            <source src="assets/video/developer.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
+        <img class="habilidades__imagen" src="assets/background/developer.webp" alt="Fondo de habilidades">
         <div class="habilidades__overlay"></div>
         <div class="habilidades__content">
             <h2 class="skill__title animate-element">Habilidades</h2>
@@ -107,47 +126,47 @@
             <p class="habilidades__descripcion animate-element">Estas son las tecnologías y herramientas que domino y utilizo en mis proyectos de desarrollo web.</p>
             <ul class="habilidades__lista">
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/html.png" alt="HTML">
+                    <img class="habilidades__icono" src="assets/technologies/html.webp" alt="HTML">
                     <p class="habilidades__nombre">HTML 5</p>
                 </li>
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/css.png" alt="CSS">
+                    <img class="habilidades__icono" src="assets/technologies/css.webp" alt="CSS">
                     <p class="habilidades__nombre">CSS</p>
                 </li>
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/javascript.png" alt="JavaScript">
+                    <img class="habilidades__icono" src="assets/technologies/javascript.webp" alt="JavaScript">
                     <p class="habilidades__nombre">JavaScript</p>
                 </li>
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/angular.png" alt="Angular">
+                    <img class="habilidades__icono" src="assets/technologies/angular.webp" alt="Angular">
                     <p class="habilidades__nombre">Angular</p>
                 </li>
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/react.png" alt="React">
+                    <img class="habilidades__icono" src="assets/technologies/react.webp" alt="React">
                     <p class="habilidades__nombre">React</p>
                 </li>
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/tailwinds.png" alt="Tailwinds">
+                    <img class="habilidades__icono" src="assets/technologies/tailwinds.webp" alt="Tailwinds">
                     <p class="habilidades__nombre">Tailwinds</p>
                 </li>
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/bootstrap.png" alt="Bootstrap">
+                    <img class="habilidades__icono" src="assets/technologies/bootstrap.webp" alt="Bootstrap">
                     <p class="habilidades__nombre">Bootstrap</p>
                 </li>
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/java.png" alt="Java">
+                    <img class="habilidades__icono" src="assets/technologies/java.webp" alt="Java">
                     <p class="habilidades__nombre">Java</p>
                 </li>
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/spring.png" alt="Spring">
+                    <img class="habilidades__icono" src="assets/technologies/spring.webp" alt="Spring">
                     <p class="habilidades__nombre">Spring</p>
                 </li>
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/python.png" alt="Python">
+                    <img class="habilidades__icono" src="assets/technologies/python.webp" alt="Python">
                     <p class="habilidades__nombre">Python</p>
                 </li>
                 <li class="habilidades__elemento">
-                    <img class="habilidades__icono" src="assets/technologies/c-sharp.png" alt="C#">
+                    <img class="habilidades__icono" src="assets/technologies/c-sharp.webp" alt="C#">
                     <p class="habilidades__nombre">C#</p>
                 </li>
             </ul>
@@ -157,11 +176,11 @@
 
     <!-- Sección de Formación académica -->
     <section class="formacion" id="formacion">
-        <h2 class="formacion__titulo">Formación académica</h2>
-        <div class="formacion__titulo--subrayado"></div>
+        <h2 class="section__title animate-element">Formación académica</h2>
+        <div class="section__title--underlined animate-element"></div>
         <ul class="formacion__lista">
             <li class="formacion__elemento" data-id="1">
-                <img class="formacion__icono" src="assets/Fornacion/sena.png" alt="Logo SENA">
+                <img class="formacion__icono" src="assets/training/sena.webp" alt="Logo SENA">
                 <div class="formacion__contenido">
                     <h3 class="formacion__nombre"> Tecnologo en sistemas</h3>
                     <p class="formacion__detalle"> Sena- 2017</p>
@@ -172,7 +191,7 @@
                 </div>
             </li>
             <li class="formacion__elemento" data-id="2">
-                <img class="formacion__icono" src="assets/Fornacion/universidad-del-tolima.png" alt="Logo Universidad del Tolima">
+                <img class="formacion__icono" src="assets/training/universidad-del-tolima.webp" alt="Logo Universidad del Tolima">
                 <div class="formacion__contenido">
                     <h3 class="formacion__nombre">Ingeniería de sistemas</h3>
                     <p class="formacion__detalle">Universidad del Tolima - 2017</p>
@@ -183,7 +202,7 @@
                 </div>
             </li>
             <li class="formacion__elemento" data-id="3">
-                <img class="formacion__icono" src="assets/Fornacion/SergioArboleda.png" alt="Logo Universidad Sergio Arboleda">
+                <img class="formacion__icono" src="assets/training/SergioArboleda.webp" alt="Logo Universidad Sergio Arboleda">
                 <div class="formacion__contenido">
                     <h3 class="formacion__nombre">Bootcamp de programación</h3>
                     <p class="formacion__detalle">Universidad Sergio Arboleda - 2024</p>
@@ -194,7 +213,7 @@
                 </div>
             </li>
             <li class="formacion__elemento" data-id="4">
-                <img class="formacion__icono" src="assets/Fornacion/alura_logo.png" alt="Logo Alura">
+                <img class="formacion__icono" src="assets/training/alura_logo.webp" alt="Logo Alura">
                 <div class="formacion__contenido">
                     <h3 class="formacion__nombre">Especialización Front-end</h3>
                     <p class="formacion__detalle">Alura - En curso</p>
@@ -205,7 +224,7 @@
                 </div>
             </li>
             <li class="formacion__elemento" data-id="5">
-                <img class="formacion__icono" src="assets/Fornacion/ibm.png" alt="Logo IBM">
+                <img class="formacion__icono" src="assets/training/ibm.webp" alt="Logo IBM">
                 <div class="formacion__contenido">
                     <h3 class="formacion__nombre">Análisis de datos</h3>
                     <p class="formacion__detalle">IBM - En curso</p>
@@ -229,10 +248,10 @@
                     <div class="proyecto__imagen-container">
                         <div class="carousel">
                            
-                            <img src="assets/Proyectos/ExploraCol-1.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen active">
-                            <img src="assets/Proyectos/ExploraCol-2.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
-                            <img src="assets/Proyectos/ExploraCol-3.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
-                            <img src="assets/Proyectos/ExploraCol-4.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                            <img src="assets/projects/ExploraCol-1.webp" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen active">
+                            <img src="assets/projects/ExploraCol-2.webp" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                            <img src="assets/projects/ExploraCol-3.webp" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                            <img src="assets/projects/ExploraCol-4.webp" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
                             <button class="carousel-button prev">&lt;</button>
                             <button class="carousel-button next">&gt;</button>
                         </div>
@@ -258,9 +277,9 @@
                 <div class="proyecto__contenedor">
                     <div class="proyecto__imagen-container">
                         <div class="carousel">
-                            <img src="/assets/Proyectos/ExploraCol-4.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen active">
-                            <img src="/assets/Proyectos/ExploraCol.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
-                            <img src="/assets/Proyectos/ExploraCol-2.png" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                            <img src="/assets/projects/ExploraCol-4.webp" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen active">
+                            <img src="/assets/projects/ExploraCol.webp" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
+                            <img src="/assets/projects/ExploraCol-2.webp" alt="Imagen del Proyecto 1" loading="lazy" class="proyecto__imagen">
                             <button class="carousel-button prev">&lt;</button>
                             <button class="carousel-button next">&gt;</button>
                         </div>
@@ -287,7 +306,7 @@
 
     <section class="contacto" id="contacto">
         <div class="contacto__contenedor">
-            <img src="assets/contacto.jpg" alt="Descripción de la imagen" class="contacto__imagen animate-element">
+            <img src="assets/contacto.gif" alt="Descripción de la imagen" class="contacto__imagen animate-element">
             <div class="contacto__texto">
                 <h2 class="section__title animate-element">Contacto</h2>
                 <div class="section__title--underlined

@@ -1,4 +1,4 @@
-const text = "¡Hola, soy Cristian Fierro!";
+const text = "¡Hola, me llamo Cristian Fierro!";
 const typingSpeed = 70; // Milisegundos entre cada letra
 let index = 0;
 
@@ -323,4 +323,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Ejecuta la animación después de un pequeño retraso
     setTimeout(animateElements, 500);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sobreMiSection = document.querySelector('.sobre-mi');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                sobreMiSection.classList.add('animate');
+                const title = sobreMiSection.querySelector('.section__title');
+                const underline = sobreMiSection.querySelector('.section__title--underlined');
+                const cards = sobreMiSection.querySelectorAll('.sobre-mi__card');
+                
+                title.classList.add('animate');
+                underline.classList.add('animate');
+                
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('animate');
+                    }, 300 + index * 100);
+                });
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(sobreMiSection);
 });
