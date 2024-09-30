@@ -562,7 +562,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(44, 54, 57, 0.9);
     color: white;
     border: none;
     padding: 10px;
@@ -585,7 +585,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1); /* Negro con 30% de opacidad */
     pointer-events: none; /* Permite que los clics pasen a través del overlay */
 }
 
@@ -857,8 +856,7 @@ body {
     transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .menu-toggle {
         display: flex;
         flex-direction: column;
@@ -909,35 +907,6 @@ body {
         background-image: url('assets/utils/ico.png');
     }
 
-    .presentacion {
-        flex-direction: column;
-        text-align: center;
-        padding: 100px 5% 5%;
-    }
-
-    .presentacion__foto {
-        order: 1;
-        margin-bottom: 20px;
-    }
-
-    .presentacion__contenedor {
-        order: 2;
-        max-width: 100%;
-    }
-
-    .redes {
-        justify-content: center;
-    }
-
-    .redes__img span {
-        display: none;
-    }
-
-    .redes__img img {
-        width: 30px;
-        height: auto;
-    }
-
     .formacion__elemento {
         width: calc(50% - 2rem);
     }
@@ -977,6 +946,47 @@ body {
     .proyecto__enlaces {
         justify-content: center;
     }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   
+
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 5% 5%;
+    }
+
+    .presentacion__foto {
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .presentacion__contenedor {
+        order: 2;
+        max-width: 100%;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+
+    .redes__img span {
+        display: none;
+    }
+
+    .redes__img img {
+        width: 30px;
+        height: auto;
+    }
+
+    .formacion__elemento {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    
     
     .contacto__contenedor {
         flex-direction: column;
@@ -1009,10 +1019,8 @@ body {
     .habilidades__elemento {
         width: 100px;
     }
-
-    .formacion__elemento {
-        width: 100%;
-        max-width: 400px;
+    .redes{
+        gap: 1rem;
     }
 
     .proyectos {
@@ -1022,7 +1030,6 @@ body {
     .proyecto {
         width: 100%; /* Asegurar que el proyecto ocupe todo el ancho */
     }
-
 
     .proyecto__imagen-container,
     .proyecto__contenido {
