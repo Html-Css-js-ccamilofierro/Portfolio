@@ -289,3 +289,38 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(nextImage, 3000);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const formacionElementos = document.querySelectorAll('.formacion__elemento');
+
+    formacionElementos.forEach(elemento => {
+        elemento.addEventListener('mouseenter', () => {
+            elemento.style.transform = 'translateY(-10px) scale(1.05)';
+        });
+
+        elemento.addEventListener('mouseleave', () => {
+            elemento.style.transform = 'translateY(0) scale(1)';
+        });
+
+    });
+
+    // Animación de entrada
+    function animateElements() {
+        formacionElementos.forEach((elemento, index) => {
+            setTimeout(() => {
+                elemento.style.opacity = '1';
+                elemento.style.transform = 'translateY(0)';
+            }, index * 200);
+        });
+    }
+
+    // Inicialmente, oculta los elementos
+    formacionElementos.forEach(elemento => {
+        elemento.style.opacity = '0';
+        elemento.style.transform = 'translateY(20px)';
+        elemento.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+
+    // Ejecuta la animación después de un pequeño retraso
+    setTimeout(animateElements, 500);
+});

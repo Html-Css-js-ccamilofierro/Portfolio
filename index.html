@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fuente del Proyecto Raleway -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Mi Portafolio</title>
 </head>
 
@@ -157,42 +157,62 @@
 
     <!-- Sección de Formación académica -->
     <section class="formacion" id="formacion">
-        <h2 class="formacion__titulo animate-element">Formación académica</h2>
-        <div class="formacion__titulo--subrayado animate-element"></div>
+        <h2 class="formacion__titulo">Formación académica</h2>
+        <div class="formacion__titulo--subrayado"></div>
         <ul class="formacion__lista">
-            <li class="formacion__elemento">
+            <li class="formacion__elemento" data-id="1">
                 <img class="formacion__icono" src="assets/Fornacion/sena.png" alt="Logo SENA">
                 <div class="formacion__contenido">
-                    <h3 class="formacion__nombre">Tecnologo en sistemas</h3>
-                    <p class="formacion__detalle">2017 - Sena</p>
+                    <h3 class="formacion__nombre"> Tecnologo en sistemas</h3>
+                    <p class="formacion__detalle"> Sena- 2017</p>
+                </div>
+                <div class="formacion__hover-info">
+                    <p>Desarrollé habilidades en soluciones tecnológicas, análisis y diseño de sistemas, 
+                        programación en Java y C#, y manejo de bases de datos.</p>
                 </div>
             </li>
-            <li class="formacion__elemento">
+            <li class="formacion__elemento" data-id="2">
                 <img class="formacion__icono" src="assets/Fornacion/universidad-del-tolima.png" alt="Logo Universidad del Tolima">
                 <div class="formacion__contenido">
                     <h3 class="formacion__nombre">Ingeniería de sistemas</h3>
-                    <p class="formacion__detalle">2017 - Universidad del Tolima</p>
+                    <p class="formacion__detalle">Universidad del Tolima - 2017</p>
+                </div>
+                <div class="formacion__hover-info">
+                    <p>Mi formación me proporcionó una base sólida en el diseño, desarrollo y gestión de sistemas informáticos, 
+                        adquiriendo conocimientos en programación, bases de datos, redes y arquitectura de software.</p>
                 </div>
             </li>
-            <li class="formacion__elemento">
+            <li class="formacion__elemento" data-id="3">
                 <img class="formacion__icono" src="assets/Fornacion/SergioArboleda.png" alt="Logo Universidad Sergio Arboleda">
                 <div class="formacion__contenido">
                     <h3 class="formacion__nombre">Bootcamp de programación</h3>
-                    <p class="formacion__detalle">2024 - Universidad Sergio Arboleda</p>
+                    <p class="formacion__detalle">Universidad Sergio Arboleda - 2024</p>
+                </div>
+                <div class="formacion__hover-info">
+                    <p>Adquirí habilidades en estructuras de datos, algoritmos, diseño de patrones de software, desarrollo backend, y 
+                        bases de datos relacionales y no relacionales, así como arquitecturas RESTful.</p>
                 </div>
             </li>
-            <li class="formacion__elemento">
+            <li class="formacion__elemento" data-id="4">
                 <img class="formacion__icono" src="assets/Fornacion/alura_logo.png" alt="Logo Alura">
                 <div class="formacion__contenido">
                     <h3 class="formacion__nombre">Especialización Front-end</h3>
-                    <p class="formacion__detalle">En curso - Alura</p>
+                    <p class="formacion__detalle">Alura - En curso</p>
+                </div>
+                <div class="formacion__hover-info">
+                    <p>Me enfoqué en el desarrollo de interfaces de usuario modernas y dinámicas con HTML, CSS y JavaScript, 
+                        creando aplicaciones web responsivas y accesibles utilizando frameworks y librerías.</p>
                 </div>
             </li>
-            <li class="formacion__elemento">
+            <li class="formacion__elemento" data-id="5">
                 <img class="formacion__icono" src="assets/Fornacion/ibm.png" alt="Logo IBM">
                 <div class="formacion__contenido">
                     <h3 class="formacion__nombre">Análisis de datos</h3>
-                    <p class="formacion__detalle">En curso - IBM</p>
+                    <p class="formacion__detalle">IBM - En curso</p>
+                </div>
+                <div class="formacion__hover-info">
+                    <p>Desarrollé habilidades en el análisis de datos, utilizando herramientas avanzadas para interpretar grandes 
+                        volúmenes de información y manejar datos estructurados y no estructurados.</p>
                 </div>
             </li>
         </ul>
