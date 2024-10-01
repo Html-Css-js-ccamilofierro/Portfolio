@@ -612,8 +612,8 @@ ul, ol {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(44, 54, 57, 0.9);
-    color: white;
+    background-color: rgba(44, 54, 57, 0.15);
+    color: var(--color-secondary);
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -645,7 +645,7 @@ ul, ol {
     flex-direction: column;
     justify-content: center;
     overflow-y: auto;
-    background-color: #fff; 
+    background-color: rgba(0, 0, 0, 0.1); 
 }
 
 .proyecto__nombre {
